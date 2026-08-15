@@ -1,13 +1,13 @@
 # PaperJoy · 学术文献终极剖析系统（V4.0）（曾用名：文献悦读）
 
-[![License](https://img.shields.io/github/license/GeorgeYoY/paper-joy?style=flat)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/GeorgeYoY/paper-joy?label=version)](https://github.com/GeorgeYoY/paper-joy/releases)
-[![Build](https://img.shields.io/github/actions/workflow/status/GeorgeYoY/paper-joy/validate.yml?branch=main&label=build)](https://github.com/GeorgeYoY/paper-joy/actions/workflows/validate.yml)
-[![Repo Size](https://img.shields.io/github/repo-size/GeorgeYoY/paper-joy)](https://github.com/GeorgeYoY/paper-joy)
-[![Last Commit](https://img.shields.io/github/last-commit/GeorgeYoY/paper-joy)](https://github.com/GeorgeYoY/paper-joy/commits/main)
-[![Downloads](https://img.shields.io/github/downloads/GeorgeYoY/paper-joy/total)](https://github.com/GeorgeYoY/paper-joy/releases/latest)
-[![Stars](https://img.shields.io/github/stars/GeorgeYoY/paper-joy?style=social)](https://github.com/GeorgeYoY/paper-joy/stargazers)
-[![Download](https://img.shields.io/badge/download-paper--joy.zip-blue)](https://github.com/GeorgeYoY/paper-joy/releases/latest)
+[![License](https://img.shields.io/github/license/youyang9205/paper-joy?style=flat)](LICENSE)
+[![Version](https://img.shields.io/github/v/release/youyang9205/paper-joy?label=version)](https://github.com/youyang9205/paper-joy/releases)
+[![Build](https://img.shields.io/github/actions/workflow/status/youyang9205/paper-joy/validate.yml?branch=main&label=build)](https://github.com/youyang9205/paper-joy/actions/workflows/validate.yml)
+[![Repo Size](https://img.shields.io/github/repo-size/youyang9205/paper-joy)](https://github.com/youyang9205/paper-joy)
+[![Last Commit](https://img.shields.io/github/last-commit/youyang9205/paper-joy)](https://github.com/youyang9205/paper-joy/commits/main)
+[![Downloads](https://img.shields.io/github/downloads/youyang9205/paper-joy/total)](https://github.com/youyang9205/paper-joy/releases/latest)
+[![Stars](https://img.shields.io/github/stars/youyang9205/paper-joy?style=social)](https://github.com/youyang9205/paper-joy/stargazers)
+[![Download](https://img.shields.io/badge/download-paper--joy.zip-blue)](https://github.com/youyang9205/paper-joy/releases/latest)
 
 > 一款**跨平台**的学术文献深度剖析提示词 / 技能。无论是 WorkBuddy、Claude、ChatGPT、Cursor、Gemini，还是任意支持「自定义指令 / System Prompt / Skills」的 AI 助手，都能装上它。
 > 粘贴一篇论文（全文 / 摘要 / PDF 复制文本 / 段落摘录均可），自动产出结构化的七模块深度剖析报告，并额外生成**试验时间线图**与**试验时间分配表**，让你一眼看清「什么时间做了什么试验、什么时间出了什么结果」。
@@ -98,7 +98,7 @@ paper-joy/
 
 - **v1.0.2**（2026-08-15）跨平台化：新增 `PROMPT.md`（纯提示词通用版，可粘贴进任意 AI）；README 改为跨主流 AI 客户端安装（WorkBuddy / Claude / Cursor / ChatGPT / Gemini 等），去 WorkBuddy 专属表述；`manifest.yaml` 描述泛化。
 - **v1.0.1**（2026-08-15）公开更名记录同步：展示名「文献悦读」→「PaperJoy」、内部标识 `literature-yuedu` → `paper-joy`（功能不变）；README 增加仓库徽章（License / Version / Build / 下载按钮等）。
-- **v1.0.0**（2026-08-15）初版发布：七模块剖析框架 + 试验时间线图 + 试验时间分配表；口语化触发词 15 条；作者 GeorgeYoY。
+- **v1.0.0**（2026-08-15）初版发布：七模块剖析框架 + 试验时间线图 + 试验时间分配表；口语化触发词 15 条；作者 youyang9205。
 
 ---
 
@@ -118,7 +118,7 @@ paper-joy/
 - **请作者喝杯咖啡（捐赠）**：[在此填写你的捐赠链接，如 爱发电 / Patreon / 支付宝收款码]
 - **交流群 / 反馈群**：[在此放置群链接或二维码图片地址，如 微信群 / QQ 群 / Discord]
 - **公众号 / 自媒体**：[在此填写你的账号名，方便网友关注后续更新]
-- 也欢迎直接开 [GitHub Issue](https://github.com/GeorgeYoY/paper-joy/issues) 提建议或报 bug。
+- 也欢迎直接开 [GitHub Issue](https://github.com/youyang9205/paper-joy/issues) 提建议或报 bug。
 
 > 注：上方方括号内容为占位符，发布前请替换为你的真实链接；不想公开可整段删除。
 
@@ -126,4 +126,4 @@ paper-joy/
 
 ## 📄 许可证
 
-[MIT](LICENSE) © GeorgeYoY
+[MIT](LICENSE) © youyang9205

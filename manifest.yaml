@@ -8,7 +8,7 @@ name: paper-joy                # 必须：英文连字符格式，且 == SKILL.m
 display_name: PaperJoy            # 展示名
 slug: paper-joy               # 市场 URL 标识，小写+连字符，建议与 name 一致
 version: 1.0.2                  # 语义化版本号；每次更新须递增（如 1.0.1 -> 1.0.2）
-author: "GeorgeYoY"
+author: "YouYang (youyang9205)"
 description: >-
   一款可跨平台安装的学术文献结构化剖析提示词/技能——将任意主流 AI 助手（WorkBuddy、Claude、ChatGPT、Cursor、Gemini 等）
   配置为严谨、客观、洞察力极强的跨学科文献分析助手。
