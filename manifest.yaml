@@ -7,7 +7,7 @@
 name: paper-joy                # 必须：英文连字符格式，且 == SKILL.md 的 frontmatter name
 display_name: PaperJoy            # 展示名
 slug: paper-joy               # 市场 URL 标识，小写+连字符，建议与 name 一致
-version: 1.0.2                  # 语义化版本号；每次更新须递增（如 1.0.1 -> 1.0.2）
+version: 1.0.4                  # 语义化版本号；每次更新须递增（如 1.0.3 -> 1.0.4）
 author: "YouYang (youyang9205)"
 description: >-
   一款可跨平台安装的学术文献结构化剖析提示词/技能——将任意主流 AI 助手（WorkBuddy、Claude、ChatGPT、Cursor、Gemini 等）
@@ -42,6 +42,15 @@ tags:
   - 研究生
 requires_api_key: false        # 本技能为纯提示词技能，不调用任何外部 API/密钥，安全扫描易通过
 changelog: |
+  1.0.4 - 回应 TRACE 全维测评低分项（反模式/FAQ 3.5、异常处理 4.0、能力边界 4.5）
+    - SKILL.md 新增四节：六·输入要求与最佳实践（含复杂格式处理、单次≤20页建议）、七·能力边界与限制（明确「能做/不能做」清单）、八·常见错误用法（反模式·不要这样做）、九·常见问题 FAQ
+    - 模块一新增「输入校验 Input Gate」：输入不足（仅标题/纯图无文/乱码）时，首条回复即输出具体补充指引，消除「提示含糊」问题
+    - 文档规范化补齐：新增 FAQ 与反模式，降低新手误用率
+  1.0.3 - 回应使用反馈：消除冗余 + 明确效果边界
+    - 单一信息源：SKILL.md 为唯一手工维护文件；PROMPT.md 改由 tools/build_prompt.py 自动生成并移出版本跟踪（gitignore），不再有两份手维护的重复核心文件、不占仓库空间
+    - 提示词新增「输出前质量自检」强制清单（模块齐备/图文映射/零虚构/Mermaid 可渲染/语言一致），拉平不同模型产出方差
+    - README 新增「模型适配建议」小节：诚实说明效果上界由基础模型决定、已内置护栏把方差压到最低，并给出推荐模型
+    - 下载入口统一指向 Release 资产
   1.0.2 - 跨平台化（让主流 AI 软件都能装）
     - 新增 PROMPT.md：去平台标记的纯提示词版，可粘贴进任意支持自定义指令/System Prompt 的 AI 客户端
     - README 重写为跨平台安装：方式A 粘贴提示词(通用) / 方式B 放入 skills 文件夹(WorkBuddy·Claude·Cursor 等) / 方式C 上架各市场
