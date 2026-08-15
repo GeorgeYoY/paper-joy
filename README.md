@@ -1,5 +1,13 @@
 # PaperJoy · 学术文献终极剖析系统（V4.0）（曾用名：文献悦读）
 
+[![License](https://img.shields.io/github/license/GeorgeYoY/paper-joy?style=flat)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue)](https://github.com/GeorgeYoY/paper-joy/releases)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/GeorgeYoY/paper-joy/actions)
+[![Repo Size](https://img.shields.io/github/repo-size/GeorgeYoY/paper-joy)](https://github.com/GeorgeYoY/paper-joy)
+[![Last Commit](https://img.shields.io/github/last-commit/GeorgeYoY/paper-joy)](https://github.com/GeorgeYoY/paper-joy/commits/main)
+[![Stars](https://img.shields.io/github/stars/GeorgeYoY/paper-joy?style=social)](https://github.com/GeorgeYoY/paper-joy/stargazers)
+[![Download](https://img.shields.io/badge/download-paper--joy.zip-blue)](https://github.com/GeorgeYoY/paper-joy/raw/main/paper-joy.zip)
+
 > 一个把 WorkBuddy 配置为「跨学科资深学者 + 顶级期刊审稿人 + 系统架构师」三位一体文献分析助手的 Skill。
 > 粘贴一篇论文（全文 / 摘要 / PDF 复制文本 / 段落摘录均可），自动产出结构化的七模块深度剖析报告，并额外生成**试验时间线图**与**试验时间分配表**，让你一眼看清「什么时间做了什么试验、什么时间出了什么结果」。
 
@@ -73,6 +81,7 @@ paper-joy/
 
 ## 🔄 更新日志
 
+- **v1.0.1**（2026-08-15）公开更名记录同步：展示名「文献悦读」→「PaperJoy」、内部标识 `literature-yuedu` → `paper-joy`（功能不变）；README 增加仓库徽章（License / Version / Build / 下载按钮等）；版本号看齐 `manifest.yaml`。
 - **v1.0.0**（2026-08-15）初版发布：七模块剖析框架 + 试验时间线图 + 试验时间分配表；口语化触发词 15 条；作者 GeorgeYoY。
 
 ---

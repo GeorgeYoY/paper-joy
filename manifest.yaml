@@ -7,7 +7,7 @@
 name: paper-joy                # 必须：英文连字符格式，且 == SKILL.md 的 frontmatter name
 display_name: PaperJoy            # 展示名
 slug: paper-joy               # 市场 URL 标识，小写+连字符，建议与 name 一致
-version: 1.0.0                  # 语义化版本号；每次更新须递增（如 1.0.0 -> 1.0.1）
+version: 1.0.1                  # 语义化版本号；每次更新须递增（如 1.0.0 -> 1.0.1）
 author: "GeorgeYoY"
 description: >-
   将 WorkBuddy 配置为「学术文献终极剖析系统（V4.0）」——一位严谨、客观、洞察力极强的跨学科文献分析助手。
@@ -40,8 +40,11 @@ tags:
   - 研究生
 requires_api_key: false        # 本技能为纯提示词技能，不调用任何外部 API/密钥，安全扫描易通过
 changelog: |
+  1.0.1 - 公开更名记录同步（市场侧对齐）
+    - 已发布版本更名：展示名「文献悦读」→「PaperJoy」，内部标识 literature-yuedu → paper-joy（功能不变）
+    - 补充 README 仓库徽章与 v1.0.1 更新日志，便于市场/网友识别为同款技能迭代而非新品
   1.0.0 - 初始发布
     - 七模块剖析框架：文本降噪(内部) / TL;DR(≤200字+星级) / 核心术语表 /
       多维度剖析(含强制图文映射) / 技术路线重构(含试验时间线标注+试验时间分配表) /
       可复现性评估 / 延伸探索
-  - 2026-08-15 更名：展示名由「文献悦读」改为「PaperJoy」，内部标识 literature-yuedu → paper-joy（功能不变）
+    - 曾用名「文献悦读」，内部标识原 literature-yuedu；2026-08-15 统一更名为 PaperJoy / paper-joy
