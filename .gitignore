@@ -1,0 +1,14 @@
+# OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# editor
+*.swp
+*~
+
+# node / python (if any build scripts added later)
+node_modules/
+__pycache__/
+*.pyc
