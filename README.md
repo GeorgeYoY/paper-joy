@@ -1,4 +1,4 @@
-# 文献悦读 · 学术文献终极剖析系统（V4.0）
+# PaperJoy · 学术文献终极剖析系统（V4.0）（曾用名：文献悦读）
 
 > 一个把 WorkBuddy 配置为「跨学科资深学者 + 顶级期刊审稿人 + 系统架构师」三位一体文献分析助手的 Skill。
 > 粘贴一篇论文（全文 / 摘要 / PDF 复制文本 / 段落摘录均可），自动产出结构化的七模块深度剖析报告，并额外生成**试验时间线图**与**试验时间分配表**，让你一眼看清「什么时间做了什么试验、什么时间出了什么结果」。
@@ -25,14 +25,14 @@
 
 ### 方式 A：直接放入 WorkBuddy（本地使用）
 1. 下载本仓库（含 `SKILL.md`、`manifest.yaml`）。
-2. 将整个文件夹（重命名为中文「文献悦读」或保留 `literature-yuedu`）放入：
+2. 将整个文件夹（重命名为 `PaperJoy` 或保留 `paper-joy`）放入：
    - 用户级：`C:\Users\你的用户名\.workbuddy\skills\`
    - 或项目级：`<你的工作区>\.workbuddy\skills\`
-3. 重启 WorkBuddy，对话中说「用文献悦读分析这篇文献」并贴入论文即可触发。
+3. 重启 WorkBuddy，对话中说「用 PaperJoy 分析这篇文献」并贴入论文即可触发。
 
 ### 方式 B：上架公共技能市场（供网友下载）
 1. 在网页端市场门户（SkillHub / ClawHub，用 GitHub 登录）点「发布技能」。
-2. 上传本仓库的 `literature-yuedu.zip`。
+2. 上传本仓库的 `paper-joy.zip`。
 3. 按 `manifest.yaml` 抄填信息（分类建议「通用工具」或「研发开发」），提交审核，通过后上架。
 
 ---
@@ -40,7 +40,7 @@
 ## 🧪 使用示例
 
 **示例 1 · 基础深度剖析**
-> 用户：用文献悦读分析这篇文献 ——（粘贴全文）
+> 用户：用 PaperJoy 分析这篇文献 ——（粘贴全文）
 > 系统：输出七模块完整报告，含强制图文映射。
 
 **示例 2 · 聚焦试验时间线（特色）**
@@ -60,10 +60,10 @@
 ## 📁 目录结构
 
 ```
-literature-yuedu/
+paper-joy/
 ├── SKILL.md                 # 技能本体（七模块剖析框架，核心）
 ├── manifest.yaml            # 市场发布元数据（name/触发词/分类/tags）
-├── literature-yuedu.zip     # 可直接上架的分发包
+├── paper-joy.zip            # 可直接上架的分发包
 ├── README.md                # 本文件
 ├── LICENSE                  # MIT 许可证
 └── .gitignore
@@ -80,7 +80,7 @@ literature-yuedu/
 ## 🤝 反馈与贡献
 
 欢迎在 GitHub Issues / 市场评论区提出吐槽与建议。收到反馈后我会：
-改 `SKILL.md` → 递增 `manifest.yaml` 的 `version` 并更新本文件「更新日志」→ 重新打包 `literature-yuedu.zip` → 重新提交市场审核 → 已安装用户自动收到更新。
+改 `SKILL.md` → 递增 `manifest.yaml` 的 `version` 并更新本文件「更新日志」→ 重新打包 `paper-joy.zip` → 重新提交市场审核 → 已安装用户自动收到更新。
 
 如想贡献代码或示例，欢迎提交 Pull Request。
 

@@ -1,12 +1,12 @@
-# 文献悦读 发布元数据（manifest）
+# PaperJoy 发布元数据（manifest）
 # 用途：上架到 WorkBuddy 公共技能市场时填写的信息模板。
 # 说明：网页端市场的表单通常会逐项收集以下字段，本文件可直接照抄填入；
 #       具体字段名以你发布时所用门户（SkillHub / ClawHub 等）的表单为准。
 # 关键信息已尽量与 SKILL.md 的 frontmatter 保持一致，避免冲突。
 
-name: literature-yuedu          # 必须：英文连字符格式，且 == SKILL.md 的 frontmatter name
-display_name: 文献悦读           # 展示名（中文）
-slug: literature-yuedu          # 市场 URL 标识，小写+连字符，建议与 name 一致
+name: paper-joy                # 必须：英文连字符格式，且 == SKILL.md 的 frontmatter name
+display_name: PaperJoy            # 展示名
+slug: paper-joy               # 市场 URL 标识，小写+连字符，建议与 name 一致
 version: 1.0.0                  # 语义化版本号；每次更新须递增（如 1.0.0 -> 1.0.1）
 author: "GeorgeYoY"
 description: >-
@@ -19,8 +19,8 @@ triggers:                      # 触发词（用户说这些话时自动调起�
   - 读一下这篇论文
   - 剖析这篇文章
   - 帮我拆解这篇论文
-  - 文献悦读
-  - 用文献悦读分析一下
+  - PaperJoy
+  - 用 PaperJoy 分析一下
   - 帮我把这篇论文读一下
   - 这篇文献主要讲啥
   - 给我讲讲这篇文章
@@ -44,3 +44,4 @@ changelog: |
     - 七模块剖析框架：文本降噪(内部) / TL;DR(≤200字+星级) / 核心术语表 /
       多维度剖析(含强制图文映射) / 技术路线重构(含试验时间线标注+试验时间分配表) /
       可复现性评估 / 延伸探索
+  - 2026-08-15 更名：展示名由「文献悦读」改为「PaperJoy」，内部标识 literature-yuedu → paper-joy（功能不变）
