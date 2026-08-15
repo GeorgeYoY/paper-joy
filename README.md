@@ -1,4 +1,4 @@
-# PaperJoy · 学术文献终极剖析系统（V4.0）（曾用名：文献悦读）
+# PaperJoy · 学术文献终极剖析系统（V4.0）（文献悦读）
 
 [![License](https://img.shields.io/github/license/youyang9205/paper-joy?style=flat)](LICENSE)
 [![Version](https://img.shields.io/github/v/release/youyang9205/paper-joy?label=version)](https://github.com/youyang9205/paper-joy/releases)
