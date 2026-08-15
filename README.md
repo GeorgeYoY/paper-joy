@@ -1,7 +1,7 @@
 # PaperJoy · 学术文献终极剖析系统（V4.0）（曾用名：文献悦读）
 
 [![License](https://img.shields.io/github/license/GeorgeYoY/paper-joy?style=flat)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/GeorgeYoY/paper-joy)](https://github.com/GeorgeYoY/paper-joy/releases)
+[![Version](https://img.shields.io/github/v/release/GeorgeYoY/paper-joy?label=version)](https://github.com/GeorgeYoY/paper-joy/releases)
 [![Build](https://img.shields.io/github/actions/workflow/status/GeorgeYoY/paper-joy/validate.yml?branch=main&label=build)](https://github.com/GeorgeYoY/paper-joy/actions/workflows/validate.yml)
 [![Repo Size](https://img.shields.io/github/repo-size/GeorgeYoY/paper-joy)](https://github.com/GeorgeYoY/paper-joy)
 [![Last Commit](https://img.shields.io/github/last-commit/GeorgeYoY/paper-joy)](https://github.com/GeorgeYoY/paper-joy/commits/main)
