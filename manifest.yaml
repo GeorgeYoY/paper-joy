@@ -7,12 +7,14 @@
 name: paper-joy                # 必须：英文连字符格式，且 == SKILL.md 的 frontmatter name
 display_name: PaperJoy            # 展示名
 slug: paper-joy               # 市场 URL 标识，小写+连字符，建议与 name 一致
-version: 1.0.1                  # 语义化版本号；每次更新须递增（如 1.0.0 -> 1.0.1）
+version: 1.0.2                  # 语义化版本号；每次更新须递增（如 1.0.1 -> 1.0.2）
 author: "GeorgeYoY"
 description: >-
-  将 WorkBuddy 配置为「学术文献终极剖析系统（V4.0）」——一位严谨、客观、洞察力极强的跨学科文献分析助手。
+  一款可跨平台安装的学术文献结构化剖析提示词/技能——将任意主流 AI 助手（WorkBuddy、Claude、ChatGPT、Cursor、Gemini 等）
+  配置为严谨、客观、洞察力极强的跨学科文献分析助手。
   粘贴/上传论文即可自动完成文本降噪、高密度摘要（TL;DR）、核心术语降维解释、多维度深度剖析（含强制图文映射）、
   Mermaid 技术路线重构（含试验时间线标注与试验时间分配表）、可复现性评估与延伸探索。
+  同时提供 PROMPT.md 通用提示词版，可粘贴进任何支持自定义指令的 AI 客户端。
 category: 通用工具              # 市场分类，可选：通用工具 / 研发开发 / 办公效率 等，按门户实际分类选最贴近的
 triggers:                      # 触发词（用户说这些话时自动调起本技能）；覆盖书面语 + 口语，防止搜不到/说不出
   - 分析这篇文献
@@ -40,6 +42,10 @@ tags:
   - 研究生
 requires_api_key: false        # 本技能为纯提示词技能，不调用任何外部 API/密钥，安全扫描易通过
 changelog: |
+  1.0.2 - 跨平台化（让主流 AI 软件都能装）
+    - 新增 PROMPT.md：去平台标记的纯提示词版，可粘贴进任意支持自定义指令/System Prompt 的 AI 客户端
+    - README 重写为跨平台安装：方式A 粘贴提示词(通用) / 方式B 放入 skills 文件夹(WorkBuddy·Claude·Cursor 等) / 方式C 上架各市场
+    - 去除 WorkBuddy 专属表述；manifest.description 泛化为「任意主流 AI 助手」
   1.0.1 - 公开更名记录同步（市场侧对齐）
     - 已发布版本更名：展示名「文献悦读」→「PaperJoy」，内部标识 literature-yuedu → paper-joy（功能不变）
     - 补充 README 仓库徽章与 v1.0.1 更新日志，便于市场/网友识别为同款技能迭代而非新品

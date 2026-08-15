@@ -9,7 +9,7 @@
 [![Stars](https://img.shields.io/github/stars/GeorgeYoY/paper-joy?style=social)](https://github.com/GeorgeYoY/paper-joy/stargazers)
 [![Download](https://img.shields.io/badge/download-paper--joy.zip-blue)](https://github.com/GeorgeYoY/paper-joy/releases/latest)
 
-> 一个把 WorkBuddy 配置为「跨学科资深学者 + 顶级期刊审稿人 + 系统架构师」三位一体文献分析助手的 Skill。
+> 一款**跨平台**的学术文献深度剖析提示词 / 技能。无论是 WorkBuddy、Claude、ChatGPT、Cursor、Gemini，还是任意支持「自定义指令 / System Prompt / Skills」的 AI 助手，都能装上它。
 > 粘贴一篇论文（全文 / 摘要 / PDF 复制文本 / 段落摘录均可），自动产出结构化的七模块深度剖析报告，并额外生成**试验时间线图**与**试验时间分配表**，让你一眼看清「什么时间做了什么试验、什么时间出了什么结果」。
 
 ---
@@ -30,26 +30,39 @@
 
 ---
 
-## 📦 安装方法
+## 📦 安装方式（任选其一，全平台通用）
 
-### 方式 A：直接放入 WorkBuddy（本地使用）
-1. 下载本仓库（含 `SKILL.md`、`manifest.yaml`）。
-2. 将整个文件夹（重命名为 `PaperJoy` 或保留 `paper-joy`）放入：
-   - 用户级：`C:\Users\你的用户名\.workbuddy\skills\`
-   - 或项目级：`<你的工作区>\.workbuddy\skills\`
-3. 重启 WorkBuddy，对话中说「用 PaperJoy 分析这篇文献」并贴入论文即可触发。
+### 方式 A：粘贴提示词（最通用，所有 AI 都支持）
+适用于**任何** AI 助手——只要它能设置「系统指令 / 自定义指令 / Custom Instructions / 系统提示词」。
 
-### 方式 B：上架公共技能市场（供网友下载）
-1. 在网页端市场门户（SkillHub / ClawHub，用 GitHub 登录）点「发布技能」。
-2. 上传本仓库的 `paper-joy.zip`。
-3. 按 `manifest.yaml` 抄填信息（分类建议「通用工具」或「研发开发」），提交审核，通过后上架。
+1. 打开本仓库的 **`PROMPT.md`**，全选复制全部内容。
+2. 粘贴到你所用 AI 的「系统指令 / 自定义指令」设置里并保存。
+3. 之后直接把论文贴给 AI，说「分析这篇文献」即可触发七模块剖析。
+
+> `PROMPT.md` 是去除了平台专属标记的纯提示词版，与本仓库 `SKILL.md` 内容等价，专供不支持 skills 文件夹的客户端使用。
+
+### 方式 B：放入技能文件夹（支持 Skills 的客户端）
+把整个 `PaperJoy` 文件夹放进对应客户端的 skills 目录，重启客户端即可：
+
+| 客户端 | 放置路径 |
+| --- | --- |
+| **WorkBuddy** | 用户级 `C:\Users\你的用户名\.workbuddy\skills\PaperJoy\` 或项目级 `<工作区>\.workbuddy\skills\PaperJoy\` |
+| **Claude（Claude Code / 桌面端）** | `~/.claude/skills/PaperJoy/` |
+| **Cursor** | 项目级 `.cursor/skills/PaperJoy/` 或用户级 skills 目录 |
+| **其他兼容客户端** | 参考其文档，将本目录作为 skill / 指令集加载（目录内需含 `SKILL.md`） |
+
+> 各客户端对 skills 的目录约定不同，上面为常见写法；若你的客户端有特殊要求，以官方文档为准。
+
+### 方式 C：上架公共技能市场（供网友一键安装）
+- **WorkBuddy 市场**：用本仓库的 `paper-joy.zip` 提交审核，通过后网友可搜索安装。
+- **其他客户端的市场 / 插件商店**：按平台要求上传 `SKILL.md` 或 `PROMPT.md`（如支持自定义技能上传，直接传 `PROMPT.md` 即可）。
 
 ---
 
 ## 🧪 使用示例
 
 **示例 1 · 基础深度剖析**
-> 用户：用 PaperJoy 分析这篇文献 ——（粘贴全文）
+> 用户：分析这篇文献 ——（粘贴全文）
 > 系统：输出七模块完整报告，含强制图文映射。
 
 **示例 2 · 聚焦试验时间线（特色）**
@@ -70,7 +83,8 @@
 
 ```
 paper-joy/
-├── SKILL.md                 # 技能本体（七模块剖析框架，核心）
+├── SKILL.md                 # 技能本体（七模块剖析框架，WorkBuddy 等客户端用）
+├── PROMPT.md               # 通用提示词版（去平台标记，任意 AI 粘贴即用）
 ├── manifest.yaml            # 市场发布元数据（name/触发词/分类/tags）
 ├── paper-joy.zip            # 可直接上架的分发包
 ├── README.md                # 本文件
@@ -82,15 +96,16 @@ paper-joy/
 
 ## 🔄 更新日志
 
-- **v1.0.1**（2026-08-15）公开更名记录同步：展示名「文献悦读」→「PaperJoy」、内部标识 `literature-yuedu` → `paper-joy`（功能不变）；README 增加仓库徽章（License / Version / Build / 下载按钮等）；版本号看齐 `manifest.yaml`。
+- **v1.0.2**（2026-08-15）跨平台化：新增 `PROMPT.md`（纯提示词通用版，可粘贴进任意 AI）；README 改为跨主流 AI 客户端安装（WorkBuddy / Claude / Cursor / ChatGPT / Gemini 等），去 WorkBuddy 专属表述；`manifest.yaml` 描述泛化。
+- **v1.0.1**（2026-08-15）公开更名记录同步：展示名「文献悦读」→「PaperJoy」、内部标识 `literature-yuedu` → `paper-joy`（功能不变）；README 增加仓库徽章（License / Version / Build / 下载按钮等）。
 - **v1.0.0**（2026-08-15）初版发布：七模块剖析框架 + 试验时间线图 + 试验时间分配表；口语化触发词 15 条；作者 GeorgeYoY。
 
 ---
 
 ## 🤝 反馈与贡献
 
-欢迎在 GitHub Issues / 市场评论区提出吐槽与建议。收到反馈后我会：
-改 `SKILL.md` → 递增 `manifest.yaml` 的 `version` 并更新本文件「更新日志」→ 重新打包 `paper-joy.zip` → 重新提交市场审核 → 已安装用户自动收到更新。
+欢迎在 GitHub Issues / 各市场评论区提出吐槽与建议。收到反馈后我会：
+改 `SKILL.md` / `PROMPT.md` → 递增 `manifest.yaml` 的 `version` 并更新本文件「更新日志」→ 重新打包 `paper-joy.zip` → 发布新 Release / 重新提交市场审核 → 已安装用户自动收到更新。
 
 如想贡献代码或示例，欢迎提交 Pull Request。
 
