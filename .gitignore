@@ -12,3 +12,7 @@ Desktop.ini
 node_modules/
 __pycache__/
 *.pyc
+
+# generated artifacts (single source of truth is SKILL.md; see README「单一信息源说明」)
+PROMPT.md
+paper-joy.zip
