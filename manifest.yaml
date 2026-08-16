@@ -7,7 +7,7 @@
 name: paper-joy                # 必须：英文连字符格式，且 == SKILL.md 的 frontmatter name
 display_name: PaperJoy            # 展示名
 slug: paper-joy               # 市场 URL 标识，小写+连字符，建议与 name 一致
-version: 1.0.4                  # 语义化版本号；每次更新须递增（如 1.0.3 -> 1.0.4）
+version: 2.0.0                  # 语义化版本号；每次更新须递增（如 1.0.4 -> 2.0.0）
 author: "YouYang (youyang9205)"
 description: >-
   一款可跨平台安装的学术文献结构化剖析提示词/技能——将任意主流 AI 助手（WorkBuddy、Claude、ChatGPT、Cursor、Gemini 等）
@@ -42,6 +42,12 @@ tags:
   - 研究生
 requires_api_key: false        # 本技能为纯提示词技能，不调用任何外部 API/密钥，安全扫描易通过
 changelog: |
+  2.0.0 - 新增「原文图表抽取与内嵌」能力（输入为 PDF 时强制）
+    - 模块一新增 1.5 子流程：用 poppler（pdftotext / pdfimages / pdftoppm）自动抽取原文全部 Figures 与 Tables
+    - Figures 以 PNG 内嵌至模块四 4.5 对应结论后；Tables 以 Markdown 表格（或原表截图）置于报告附录「原文图表」
+    - 新增降级处理：环境缺 poppler 时退回严格文字引用并标注原因，绝不编造图表
+    - 输出自检新增「图表已内嵌」项；frontmatter 描述与六·输入要求同步说明 PDF 最佳实践
+    - 版本号由 1.0.4 提升至 2.0.0（剖析系统内部代号同步为 v2.0.0）
   1.0.4 - 回应 TRACE 全维测评低分项（反模式/FAQ 3.5、异常处理 4.0、能力边界 4.5）
     - SKILL.md 新增四节：六·输入要求与最佳实践（含复杂格式处理、单次≤20页建议）、七·能力边界与限制（明确「能做/不能做」清单）、八·常见错误用法（反模式·不要这样做）、九·常见问题 FAQ
     - 模块一新增「输入校验 Input Gate」：输入不足（仅标题/纯图无文/乱码）时，首条回复即输出具体补充指引，消除「提示含糊」问题
