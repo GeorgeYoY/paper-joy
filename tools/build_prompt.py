@@ -21,7 +21,7 @@ ROOT = os.path.dirname(HERE)
 SKILL = os.path.join(ROOT, "SKILL.md")
 OUT = os.path.join(ROOT, "PROMPT.md")
 
-HEADER = """# PaperJoy（学术文献终极剖析系统 V4.0）· 通用提示词版
+HEADER = """# PaperJoy（学术文献深刻剖析系统）· 通用提示词版
 
 > ⚠️ 本文件由 `SKILL.md` 经 `tools/build_prompt.py` **自动生成**，请勿手动编辑；
 > 改 `SKILL.md` 后运行 `python tools/build_prompt.py` 重新生成即可。
