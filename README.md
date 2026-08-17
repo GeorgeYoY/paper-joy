@@ -1,7 +1,6 @@
 # PaperJoy · 学术文献深刻剖析系统（文献悦读）
 
 [![License](https://img.shields.io/github/license/youyang9205/paper-joy?style=flat)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/youyang9205/paper-joy?label=version)](https://github.com/youyang9205/paper-joy/releases)
 [![Build](https://img.shields.io/github/actions/workflow/status/youyang9205/paper-joy/validate.yml?branch=main&label=build)](https://github.com/youyang9205/paper-joy/actions/workflows/validate.yml)
 [![Repo Size](https://img.shields.io/github/repo-size/youyang9205/paper-joy)](https://github.com/youyang9205/paper-joy)
 [![Last Commit](https://img.shields.io/github/last-commit/youyang9205/paper-joy)](https://github.com/youyang9205/paper-joy/commits/main)
