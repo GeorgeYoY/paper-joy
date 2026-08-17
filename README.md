@@ -1,6 +1,7 @@
 # PaperJoy · 学术文献深刻剖析系统（文献悦读）
 
 [![License](https://img.shields.io/github/license/youyang9205/paper-joy?style=flat)](LICENSE)
+[![Version](https://img.shields.io/github/v/release/youyang9205/paper-joy?label=version)](https://github.com/youyang9205/paper-joy/releases)
 [![Build](https://img.shields.io/github/actions/workflow/status/youyang9205/paper-joy/validate.yml?branch=main&label=build)](https://github.com/youyang9205/paper-joy/actions/workflows/validate.yml)
 [![Repo Size](https://img.shields.io/github/repo-size/youyang9205/paper-joy)](https://github.com/youyang9205/paper-joy)
 [![Last Commit](https://img.shields.io/github/last-commit/youyang9205/paper-joy)](https://github.com/youyang9205/paper-joy/commits/main)
@@ -74,6 +75,35 @@ PaperJoy 本质是一份**结构化提示词**，不是独立程序——它不�
 
 ---
 
+## 🖼️ 图表自动裁剪工具（让 PDF 剖析自动内嵌原文图表）
+
+当你**输入 PDF** 时，PaperJoy 会把原文**全部 Figures / Tables 自动裁剪并内嵌**进生成的 markdown（见 `SKILL.md` 模块一 1.5），让你边读边对照。裁剪由一个**随本技能一同提供**的轻量 Python 工具完成。
+
+**这个工具只依赖一个纯 Python 包 `PyMuPDF`**——不依赖任何系统二进制（无需装 poppler），Windows / macOS / Linux 通用，且可**离线安装**。首次使用前只需装一次：
+
+```bash
+pip install pymupdf
+# 国内网络慢，可加清华镜像：
+# pip install pymupdf -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+装好之后，把 PDF 交给技能时，它会调用本仓库的：
+
+```bash
+python tools/extract_figures.py "<你的文献>.pdf"
+```
+
+工具会：
+
+- 自动抽取 PDF 中**全部** Figures 与 Tables，保存为 `fig<N>.png` / `tbl<N>.png`（命名对齐原文 Figure/Table 编号，如 `fig1.png`、`tbl2.png`）；
+- 在终端打印「**编号 → 文件**」清单，并写出 `manifest.json` 供你人工核对；
+- 矢量图无内嵌位图时自动回退到「标题上方启发式裁剪」，清单中标注「需校对」。
+
+> ✅ **首次装好即功能完整**：之后每次遇到 PDF 直接按 1.5 运行工具即可，全自动出图，无需再配置。
+> ⚠️ **未装工具也能用**：若未安装 `pymupdf`，技能会自动降级为「图表编号 + 图题 + 概述」的文字引用（并提示你按上方安装后重试），**绝不编造图表**；已装 poppler 的用户也有一套无需 PyMuPDF 的手动回退方案。
+
+---
+
 ## 🧪 使用示例
 
 **示例 1 · 基础深度剖析**
@@ -131,7 +161,8 @@ PaperJoy 本质是一份**结构化提示词**，不是独立程序——它不�
 paper-joy/
 ├── SKILL.md                 # ★ 唯一手工维护文件（七模块剖析框架，WorkBuddy 等客户端用）
 ├── tools/
-│   └── build_prompt.py      # 由 SKILL.md 自动生成 PROMPT.md 的脚本（单一信息源构建器）
+│   ├── build_prompt.py      # 由 SKILL.md 自动生成 PROMPT.md 的脚本（单一信息源构建器）
+│   └── extract_figures.py   # 图表自动裁剪工具：PDF 输入时一键抽取并裁剪全部 Figures/Tables 为 PNG（仅依赖 PyMuPDF）
 ├── PROMPT.md               # （自动生成，未跟踪）通用提示词版，见 Release 资产
 ├── paper-joy.zip            # （自动生成，未跟踪）可直接上架的分发包，见 Release 资产
 ├── manifest.yaml            # 市场发布元数据（name/触发词/分类/tags）
@@ -146,6 +177,8 @@ paper-joy/
 
 ## 🔄 更新日志
 
+- **v2.0.4**（2026-08-17）新增「图表自动裁剪工具」（PDF 输入时一键内嵌原文全部 Figures / Tables）：① 新增随技能附带的轻量工具 `tools/extract_figures.py`，仅依赖纯 Python 包 PyMuPDF（无需 poppler、跨平台、可离线装），自动抽取全部图/表为 `fig<N>.png` / `tbl<N>.png` 并打印清单 + 写出 `manifest.json`；② SKILL.md 新增「〇、首次使用前：安装图表自动裁剪工具（仅需一次）」（`pip install pymupdf`），装好后功能完整；③ 模块一 1.5 重写为「PyMuPDF 一键裁剪（默认）+ 已装 poppler 手动回退」双路径，首次使用零系统依赖；④ 本文档新增「🖼️ 图表自动裁剪工具」说明并更新目录结构。
+- **v2.0.3**（2026-08-17）修复 Mermaid 时间线底部文字重叠：① 模块五 ② 时间线图新增「防重叠硬约束」——节点数 ≤ 9、每节点固定 `时间 : 阶段短语(≤8字) : 极简动作(≤12字)`、禁止整句描述与 `；` 并列；② 时间线仅做时间轴总览，完整细节移至③试验时间分配表；③ 示例改为极简短标签版，根治节点一多 / 文字一长就重叠的渲染缺陷。
 - **v2.0.2**（2026-08-16）命名与文案规范化 + 裁剪哲学延续：① 系统内部代号「终极剖析系统」→「深刻剖析系统」；② 角色设定移除版本号展示，统一为「学术文献深刻剖析系统（展示名 PaperJoy，中文名「文献悦读」）」；③ 全文清理「中文术语（英文对照）」括号标注（如「一分钟速览（TL;DR）」→「一分钟速览」），仅保留枚举 / 版本注记 / 命令行说明类括号；④ 表截图裁剪沿用「快 + 准、不修边」原则。
 - **v2.0.1**（2026-08-16）Tables 默认呈现由「Markdown 转写」翻转为「原表截图为主 + 轻量文字兜底」，兼顾准确性与省 token；完整 Markdown 转写改为用户追加「转写表格」开关触发。
 - **v2.0.0**（2026-08-16）新增「原文图表抽取与内嵌」能力：PDF 输入时强制用 poppler 抽取并内嵌全部 Figures 与 Tables，方便用户对照学习。
